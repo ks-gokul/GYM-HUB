@@ -1,0 +1,39 @@
+.gh-btn{
+    color: #000;
+    background-color: $color-white;
+    border: 1px solid #fff;
+    font-family: inherit;
+    display: inline-block;
+    position: relative;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all .5s;
+    cursor: pointer;
+    overflow: hidden;
+  &:hover{
+    color: #fff;
+    background-color: transparent;
+    &::before{
+        top: 0;
+        left: -15%;
+    }
+  }
+
+  &--inv{
+    background-color: #000;
+    color: $color-white;
+    border: 1px solid #000;
+    overflow: hidden;
+    &::before{
+        background-color: $color-white;
+    }
+    &:hover{
+        color: $color-white;
+        background-color: rgba($color: #5b5b5b, $alpha: 1.0);
+    }
+  }
+}

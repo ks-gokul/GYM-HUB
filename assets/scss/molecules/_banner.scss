@@ -1,0 +1,142 @@
+.gh-banner {
+    position: relative;
+
+    &__bg-out {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__img-desk,   
+    &__img-tab,
+    &__img-mob {
+        width: 100%;
+        height: 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+
+    &__img-tab,
+    &__img-mob {
+        display: none;
+    }
+
+    &__cnt {
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       z-index: 2;
+       justify-content: center;
+       height: 600px;
+       width: 50%;
+    }
+
+    &__heading {
+        color: $color-white;
+        font-size: 50px;
+        font-weight: 700;
+        padding-bottom: 16px;
+    }
+
+    &__para {
+    color: $color-white;
+    font-size: 28px;
+    font-weight: 500;
+    padding-bottom: $spacer-3;
+    }
+
+    &__cta {
+        width: 25%;
+        .gh-btn {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+}
+
+@include tablet {
+    .gh-banner {
+
+        &__img-tab {
+            display: block;
+        }
+
+        &__img-desk,
+        &__img-mob {
+            display: none;
+        }
+    }
+}
+
+@include tablet {
+    .gh-banner {
+        
+        &__heading {
+            font-size: 32px;
+        }
+
+        &__para {
+            font-size: 18px;
+        }
+
+        &__cnt {
+            width: 47%;
+            height: 300px;
+        }
+        
+        &__img-mob {
+            display: block;
+        }
+
+        &__img-desk,
+        &__img-tab {
+            display: none;
+        }
+
+        &__cta {
+            width: 50%;
+        }
+
+    }
+}
+
+@include mobile {
+    .gh-banner {
+
+        &__heading {
+            font-size: 25px;
+        }
+
+        &__para {
+            font-size: 12px;
+        }
+
+        &__cnt {
+            width: 50%;
+            height: 250px;
+        }
+        
+        &__img-mob {
+            display: block;
+        }
+
+        &__img-desk,
+        &__img-tab {
+            display: none;
+        }
+
+        &__cta {
+            width: 60%;
+        }
+
+        .gh-btn {
+            font-size: 12px;
+        }
+    }
+}
