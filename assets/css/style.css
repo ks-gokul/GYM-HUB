@@ -315,6 +315,7 @@ button {
 
 .gh-banner {
   position: relative;
+  background-color: #000;
 }
 .gh-banner__bg-out {
   width: 100%;
