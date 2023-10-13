@@ -5,7 +5,7 @@ $(".slider").slick({
   slidesToScroll: 1,
   dots: true,
   autoplay: true,
-  fade: true,
+  // fade: true,
 });
 
 //pricing
