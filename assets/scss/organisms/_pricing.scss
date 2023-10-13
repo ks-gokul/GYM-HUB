@@ -16,3 +16,15 @@
         margin: 0 16px;
     }
 }
+
+@include mobile {
+    .gh-pricing {
+        &__outer {
+            flex-direction: column;
+        }
+        &__tile {
+            width: calc(100% - 32px);
+            padding-bottom: $spacer-4;
+        }
+    }
+}
