@@ -411,11 +411,11 @@ button {
   .gh-banner__cnt {
     width: 50%;
     height: 250px;
-    margin-top: 68px;
+    margin-top: 66px;
   }
   .gh-banner__img-mob {
     display: block;
-    margin-top: 68px;
+    margin-top: 66px;
   }
   .gh-banner__img-desk, .gh-banner__img-tab {
     display: none;
