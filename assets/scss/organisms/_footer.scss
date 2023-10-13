@@ -1,5 +1,5 @@
 .gh-footer {
-    background-image: url(/assets/images/footer-bg.jpg);
+    // padding: $spacer-6 $spacer-0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -14,19 +14,17 @@
         background-color: rgba(#000000, 0.6);
     }
     &__outer {
+        padding: $spacer-6 $spacer-0;
         display: flex;
         position: relative;
         z-index: 1;
     }
     &__sec-1 {
-        width: 30%;
-        padding: $spacer-2;
-    }
-    &__sec-2 {
-        width: 70%;
+        width: calc(30% - 64px);
+        margin: $spacer-0 $spacer-5;
     }
     &__head {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: $font-medium;
         color: $color-white;
         margin-bottom: $spacer-3;
@@ -36,6 +34,13 @@
         font-weight: $font-regular;
         color: $color-text-grey;
         margin-bottom: $spacer-3;
+        &--accodn {
+            transition: 0.3s;
+            &:hover {
+                color: $color-white;
+                transition: 0.3s;
+            }
+        }
     }
     &__input {
         background: rgba(192, 190, 190, 0.3);
@@ -46,5 +51,57 @@
         padding: $spacer-2;
         margin-bottom: $spacer-3;
     }
+    &__sec-2 {
+        width: calc(70% - 64px);
+        margin: $spacer-0 $spacer-5;
+    }
+    .accordion {
+        display: flex;
+    }
+    .accordion-item {
+        width: calc(30% - 64px);
+        margin: $spacer-0 $spacer-5;
+        background: transparent;
+        border: $spacer-0;
+    }
+    .accordion-button {
+        font-size: 26px;
+        color: $color-white;
+        background: transparent;
+        padding: $spacer-0;
+        margin-bottom: $spacer-3;
+        pointer-events: none;
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+        }
+        &::after {
+            content: none;
+        }
+    }
+    .accordion-body {
+        padding: $spacer-0;
+    }
+    &__acc-box {
+        display: flex;
+        flex-direction: column;
+    }
+    &__copy-right {
+        position: relative;
+        z-index: 1;
+        background: rgba(#000000, 0.6);
+        padding: $spacer-3 $spacer-0;
+        &-cp {
+            font-size: 16px;
+            color: $color-white;
+            text-align: center;
+        }
+    }
+}
 
+
+@include mobile {
+    .gh-footer {
+        
+    }
 }
