@@ -1,0 +1,18 @@
+.gh-pricing {
+    padding: $spacer-6 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    
+    &__outer {
+        display: flex;
+        margin: 0 -16px;
+    }
+
+    &__tile {
+        width: calc(25% - 32px);
+        margin: 0 16px;
+    }
+}
