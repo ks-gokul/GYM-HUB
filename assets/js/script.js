@@ -14,10 +14,12 @@ const priceTile = document.querySelectorAll(".gh-pricetile");
 
 if (priceTile) {
   priceTile.forEach((item) => {
-    item.classList.remove("active")
-    item.addEventListener("click", (e)=> {
-      item.classList.add("active")
-    })
+    item.addEventListener("click", (e) => {
+      priceTile.forEach((ele) => {
+        ele.classList.remove("active");
+      });
+      item.classList.add("active");
+    });
   });
 }
 
