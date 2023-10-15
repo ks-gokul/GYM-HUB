@@ -1,0 +1,83 @@
+.gh-modal {
+
+    .modal-content {
+        background-color: #131619;
+    }
+    .btn-close {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f1f1f1'%3E%3Cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3E%3C/svg%3E");
+    }
+    .modal-footer {
+        justify-content: flex-start;
+        border: 0;
+    }
+    .modal-header {
+        border: 0;
+        color: #fff;
+        font-size: 24px;
+        padding: 24px 24px 0 24px;
+    }
+    .modal-body {
+        padding: 4px 24px 0 24px;
+    }
+
+    .gh-btn {
+        width: 20%;
+    }
+
+    .btn-check:focus+.btn, .btn:focus, .btn-close:focus {
+        box-shadow: none;
+    }
+
+    &__photo {
+        padding-bottom: 30px;
+        img, video {
+            width: 100%;
+            height: auto;
+        }
+
+        &--ts {
+            padding-top: 30px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__woh {
+        display: flex;
+        justify-content: flex-end;
+        padding: 24px 24px 0 24px;
+        color: #fff;
+        font-size: 24px;
+        h2 {
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    ul {
+        li {
+            position: relative;
+            color: #fff;
+            font-size: 16px;
+            padding-left: 20px;
+            padding-bottom: 8px;
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 18%;
+                width: 8px;
+                height: 8px;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .gh-btn {
+        .gh-btn {
+            width: 40%;
+        }
+    }
+}
