@@ -1,5 +1,6 @@
 .gh-banner {
     position: relative;
+    background-color: #000;
 
     &__bg-out {
         width: 100%;
@@ -130,12 +131,12 @@
         &__cnt {
             width: 50%;
             height: 250px;
-            margin-top: 68px;
+            margin-top: 66px;
         }
         
         &__img-mob {
             display: block;
-            margin-top: 68px;
+            margin-top: 66px;
         }
 
         &__img-desk,

@@ -9,11 +9,21 @@
     &__outer {
         display: flex;
         margin: 0 -16px;
+        flex-wrap: wrap;
     }
 
     &__tile {
         width: calc(25% - 32px);
         margin: 0 16px;
+    }
+}
+
+@include tablet {
+    .gh-pricing {
+        &__tile {
+            width: calc(50% - 32px);
+            padding-bottom: $spacer-4;
+        }
     }
 }
 

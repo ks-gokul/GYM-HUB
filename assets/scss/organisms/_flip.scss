@@ -35,9 +35,8 @@
     }
 
     &__heading {
-        font-family: "Next Sphere";
-        font-size: 45px;
-        font-weight: 700;
+        font-size: 50px;
+        font-weight: 900;
         margin-bottom: 32px;
         color: #fff;
         z-index: 2;
@@ -51,6 +50,18 @@
         color: #fff;
         z-index: 2;
         position: relative;
+    }
+}
+
+@include tablet {
+    .gh-respo {
+        &__outer {
+            justify-content: center;
+        }
+        &__tile {
+            width: calc(50% - 32px);
+            padding-bottom: 20px;
+        }
     }
 }
 
