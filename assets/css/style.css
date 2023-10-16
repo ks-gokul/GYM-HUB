@@ -940,11 +940,10 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 900px;
   position: relative;
   display: flex;
   align-items: center;
-  padding: 30px 0;
 }
 .gh-diet::after {
   position: absolute;
@@ -956,6 +955,14 @@ button {
   background-color: #000;
   opacity: 0.6;
 }
+.gh-diet video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .gh-diet__txt {
   display: flex;
   align-items: center;
@@ -963,7 +970,8 @@ button {
   z-index: 2;
 }
 .gh-diet__txt span {
-  color: #fff;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  color: #000;
   font-weight: 900;
   opacity: 0.3;
   font-size: 400px;
@@ -973,7 +981,8 @@ button {
   cursor: pointer;
 }
 .gh-diet__txt span:hover {
-  transition: 0.3s;
+  color: #fff;
+  transition: 0.1s;
   opacity: 0.5;
 }
 .gh-diet__plan {
