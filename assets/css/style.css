@@ -673,7 +673,7 @@ button {
 }
 
 @media (max-width: 767px) {
-  .gh-btn .gh-btn {
+  .gh-modal .gh-btn {
     width: 40%;
   }
 }
