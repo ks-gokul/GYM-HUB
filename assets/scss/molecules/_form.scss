@@ -1,0 +1,40 @@
+.gh-form {
+    padding: 32px;
+    background-color: #000;
+    opacity: 0.5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    
+    input {
+        border: 1px solid #f1f1f1;
+        background-color: #000;
+        border-radius: 5px;
+        font-size: 14px;
+        padding: 8px 4px;
+        width: 100%;
+        margin-bottom: 24px;
+        color: #f1f1f1;
+    }
+    
+    &__drop {
+        display: flex;
+    }
+
+    &__one {
+        width: 20%;
+        margin-right: 16px;
+    }
+    
+    &__two {
+        width: 80%;
+        display: flex;
+    }
+
+    &__cta {
+        width: 30%;
+        padding-top: 10px;
+    }
+}
