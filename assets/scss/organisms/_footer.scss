@@ -1,8 +1,5 @@
 .gh-footer {
-    // padding: $spacer-6 $spacer-0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #131619;
     position: relative;
     &::after {
         position: absolute;
@@ -102,6 +99,26 @@
 
 @include mobile {
     .gh-footer {
-        
+        &__outer {
+            display: block;
+        }
+        &__sec-1 {
+            width: 100%;
+            margin: $spacer-3 $spacer-0;
+        }
+        &__sec-2 {
+            width: 100%;
+            margin: $spacer-0;
+        }
+        .accordion {
+            display: block;
+        }
+        .accordion-item {
+            width: 100%;
+            margin: $spacer-0;
+        }
+        .accordion-button {
+            pointer-events: fill;
+        }
     }
 }
