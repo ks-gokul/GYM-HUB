@@ -1,6 +1,6 @@
 .gh-offers {
     background-color: #131619;
-    padding: 40px 0;
+    padding: 50px 0;
 
     &__out {
         display: flex;
@@ -11,7 +11,7 @@
     }
 
     &__image {
-        width: 50%;
+        width: 55%;
         video {
             // border-radius: 10px;
             // overflow: hidden;
@@ -23,7 +23,7 @@
     }
 
     &__block {
-        width: 50%;
+        width: 45%;
         padding: 0 16px;
         &--fm {
             display: flex;
@@ -32,6 +32,14 @@
                 display: flex;
                 justify-content: center;
             }
+        }
+    }
+}
+
+@include tablet {
+    .gh-offers {
+        &__block {
+            width: 80% !important;
         }
     }
 }
@@ -47,6 +55,7 @@
         }
         &__block {
             width: 100%;
+            padding: 0;
         }
     }
 }

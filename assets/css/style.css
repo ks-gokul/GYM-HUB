@@ -677,58 +677,110 @@ button {
     width: 40%;
   }
 }
-.gh-icon {
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  background-color: #24272E;
-  border-radius: 5px;
-  margin-bottom: 24px;
+.gh-icon body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background: #000;
 }
-.gh-icon__icon {
-  width: 15%;
-  margin-right: 24px;
+.gh-icon .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  width: 100%;
+  height: 500px;
+  transition: all 400ms;
+  background-color: transparent;
+}
+.gh-icon .container:hover .box {
+  filter: grayscale(100%) opacity(24%);
+}
+.gh-icon .box {
+  position: relative;
+  background: var(--img) center center;
+  background-size: cover;
+  transition: all 400ms;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.gh-icon__icon img {
-  width: 70px;
-  height: 70px;
+.gh-icon .container .box:hover {
+  filter: grayscale(0%) opacity(100%);
 }
-.gh-icon__right {
-  width: 85%;
+.gh-icon .container:has(.box-1:hover) {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
 }
-.gh-icon__right h1 {
-  font-size: 24px;
-  font-weight: 600;
-  padding-bottom: 8px;
+.gh-icon .container:has(.box-2:hover) {
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+.gh-icon .container:has(.box-3:hover) {
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+.gh-icon .container:has(.box-4:hover) {
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+.gh-icon .container:has(.box-5:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+.gh-icon .box:nth-child(odd) {
+  transform: translateY(-16px);
+}
+.gh-icon .box:nth-child(even) {
+  transform: translateY(16px);
+}
+.gh-icon .box::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 20px;
+  background: #000;
   color: #fff;
+  padding: 10px 10px 10px 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 400ms;
 }
-.gh-icon__right p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
+.gh-icon .box:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 400ms;
 }
 
 .gh-form {
   padding: 32px;
-  background-color: #000;
   opacity: 0.9;
   border-radius: 10px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.gh-form::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
 }
 .gh-form__in {
+  z-index: 1;
   position: relative;
   border-bottom: 1px solid #fff;
   padding: 8px 4px;
   margin-bottom: 20px;
-  background-color: #000;
 }
 .gh-form__in input {
-  background-color: #000;
+  background-color: transparent;
   font-size: 14px;
   width: 100%;
   color: #fff;
@@ -743,6 +795,7 @@ button {
   transition: 0.7s;
 }
 .gh-form__in-l {
+  z-index: 1;
   position: absolute;
   pointer-events: none;
   left: 4px;
@@ -750,25 +803,35 @@ button {
   color: #f1f1f1;
   font-size: 14px;
   transition: 0.7s;
-  opacity: 0.6;
-}
-.gh-form label {
-  color: #fff;
-  padding-bottom: 4px;
-  font-size: 13px;
 }
 .gh-form__drop {
   display: flex;
+  justify-content: space-between;
+}
+.gh-form__drop .gh-form__in {
+  width: 15%;
+}
+.gh-form__drop .gh-form__in input {
+  width: 100%;
 }
 .gh-form__one {
-  width: 10%;
+  width: 100%;
   margin-right: 16px;
 }
 .gh-form__cta {
-  width: 25%;
+  z-index: 1;
+  width: 35%;
   padding-top: 10px;
 }
 
+@media (max-width: 767px) {
+  .gh-form__drop {
+    flex-direction: column;
+  }
+  .gh-form__cta {
+    width: 50%;
+  }
+}
 .gh-main-banner {
   background-color: #000;
 }
@@ -1123,7 +1186,7 @@ button {
 }
 .gh-offers {
   background-color: #131619;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 .gh-offers__out {
   display: flex;
@@ -1133,7 +1196,7 @@ button {
   flex-direction: row-reverse;
 }
 .gh-offers__image {
-  width: 50%;
+  width: 55%;
 }
 .gh-offers__image video {
   width: 100%;
@@ -1144,7 +1207,7 @@ button {
      object-position: center;
 }
 .gh-offers__block {
-  width: 50%;
+  width: 45%;
   padding: 0 16px;
 }
 .gh-offers__block--fm {
@@ -1156,6 +1219,11 @@ button {
   justify-content: center;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gh-offers__block {
+    width: 80% !important;
+  }
+}
 @media (max-width: 1023px) {
   .gh-offers__out {
     flex-direction: column;
@@ -1166,5 +1234,6 @@ button {
   }
   .gh-offers__block {
     width: 100%;
+    padding: 0;
   }
 }

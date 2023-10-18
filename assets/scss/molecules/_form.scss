@@ -1,21 +1,35 @@
 .gh-form {
     padding: 32px;
-    background-color: #000;
     opacity: 0.9;
     border-radius: 10px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+    }
 
     &__in {
+        z-index: 1;
         position: relative;
         border-bottom: 1px solid #fff;
         padding: 8px 4px;
         margin-bottom: 20px;
-        background-color: #000;
         input {
-            background-color: #000;
+            background-color: transparent;
             font-size: 14px;
             width: 100%;
             color: #fff;
@@ -33,6 +47,7 @@
         }
 
         &-l {
+            z-index: 1;
             position: absolute;
             pointer-events: none;
             left: 4px;
@@ -40,29 +55,39 @@
             color: #f1f1f1;
             font-size: 14px;
             transition: 0.7s;
-            opacity: 0.6;
     }
-    }
-
-    
-
-    label {
-        color: #fff;
-        padding-bottom: 4px;
-        font-size: 13px;
     }
     
     &__drop {
         display: flex;
+        justify-content: space-between;
+        .gh-form__in {
+            width: 15%;
+            input {
+                width: 100%;
+            }
+        }
     }
 
     &__one {
-        width: 10%;
+        width: 100%;
         margin-right: 16px;
     }
 
     &__cta {
-        width: 25%;
+        z-index: 1;
+        width: 35%;
         padding-top: 10px;
+    }
+}
+
+@include mobile {
+    .gh-form {
+        &__drop {
+            flex-direction: column;
+        }
+        &__cta {
+            width: 50%;
+        }
     }
 }
