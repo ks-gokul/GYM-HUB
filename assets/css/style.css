@@ -677,9 +677,6 @@ button {
     width: 40%;
   }
 }
-.gh-icon {
-  @import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
-}
 .gh-icon body {
   display: grid;
   place-content: center;
@@ -703,6 +700,7 @@ button {
   position: relative;
   background: var(--img) center center;
   background-size: cover;
+  background-position: center;
   transition: all 400ms;
   display: flex;
   justify-content: center;
