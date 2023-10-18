@@ -1125,7 +1125,7 @@ button {
   position: relative;
   z-index: 2;
 }
-.gh-diet__txt span {
+.gh-diet__txt .clr {
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   color: #000;
   font-weight: 900;
@@ -1136,10 +1136,33 @@ button {
   transition: 0.3s;
   cursor: pointer;
 }
-.gh-diet__txt span:hover {
+.gh-diet__txt .clr:hover {
   color: #fff;
   transition: 0.1s;
   opacity: 0.5;
+}
+.gh-diet__txt .clr:first-child {
+  animation-name: example;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  color: #000;
+}
+@keyframes example {
+  0% {
+    color: #fff;
+  }
+  25% {
+    color: #000;
+  }
+  50% {
+    color: #fff;
+  }
+  75% {
+    color: #000;
+  }
+  100% {
+    color: #fff;
+  }
 }
 .gh-diet__plan {
   position: relative;
