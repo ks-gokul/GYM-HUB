@@ -374,14 +374,6 @@ button {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .gh-banner__img-tab {
-    display: block;
-  }
-  .gh-banner__img-desk, .gh-banner__img-mob {
-    display: none;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
   .gh-banner__heading {
     font-size: 32px;
   }
@@ -390,12 +382,14 @@ button {
   }
   .gh-banner__cnt {
     width: 47%;
-    height: 300px;
+    height: 400px;
+    margin-top: 66px;
   }
-  .gh-banner__img-mob {
+  .gh-banner__img-tab {
     display: block;
+    margin-top: 66px;
   }
-  .gh-banner__img-desk, .gh-banner__img-tab {
+  .gh-banner__img-desk, .gh-banner__img-mob {
     display: none;
   }
   .gh-banner__cta {
@@ -411,7 +405,7 @@ button {
   }
   .gh-banner__cnt {
     width: 50%;
-    height: 250px;
+    height: 300px;
     margin-top: 66px;
   }
   .gh-banner__img-mob {
@@ -1179,7 +1173,7 @@ button {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .gh-diet {
-    height: 600PX;
+    height: 400px;
   }
   .gh-diet__txt .clr {
     font-size: 250px;
