@@ -1060,6 +1060,212 @@ button {
     padding-bottom: 20px;
   }
 }
+.gh-footer {
+  background-color: #131619;
+  position: relative;
+}
+.gh-footer::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.gh-footer__outer {
+  padding: 40px 0 16px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.gh-footer__sec-1 {
+  width: calc(30% - 64px);
+  margin: 0 32px;
+}
+.gh-footer__logo {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.gh-footer__logo img {
+  width: 100%;
+  height: auto;
+}
+.gh-footer__head {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.gh-footer__txt {
+  font-size: 16px;
+  font-weight: 400;
+  color: #b3b3b3;
+  margin-bottom: 8px;
+}
+.gh-footer__txt--accodn {
+  transition: 0.3s;
+}
+.gh-footer__txt--accodn:hover {
+  color: #ffffff;
+  transition: 0.3s;
+}
+.gh-footer__contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.gh-footer__contact-phn, .gh-footer__contact-mail {
+  height: auto;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+.gh-footer__contact-phn svg, .gh-footer__contact-mail svg {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+.gh-footer__contact-phn {
+  width: 15px;
+}
+.gh-footer__contact-mail {
+  width: 20px;
+}
+.gh-footer__contact p {
+  font-size: 16px;
+  color: #b3b3b3;
+  transition: 0.3s;
+}
+.gh-footer__contact:hover svg path {
+  fill: #ffffff;
+  transition: 0.3s;
+}
+.gh-footer__contact:hover p {
+  color: #ffffff;
+  transition: 0.3s;
+}
+.gh-footer__sec-2 {
+  width: calc(70% - 64px);
+  margin: 0 32px;
+}
+.gh-footer .accordion {
+  display: flex;
+}
+.gh-footer .accordion-item {
+  width: calc(25% - 32px);
+  margin: 0 16px;
+  background: transparent;
+  border: 0;
+}
+.gh-footer .accordion-button {
+  font-size: 18px;
+  color: #ffffff;
+  background: transparent;
+  padding: 0;
+  pointer-events: none;
+  box-shadow: none;
+}
+.gh-footer .accordion-button:focus {
+  box-shadow: none;
+}
+.gh-footer .accordion-button::after {
+  content: none;
+}
+.gh-footer .accordion-header {
+  position: relative;
+  min-height: 45px;
+}
+.gh-footer .accordion-body {
+  padding: 0;
+}
+.gh-footer__acc-box {
+  display: flex;
+  flex-direction: column;
+}
+.gh-footer__copy-right {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 16px 0;
+}
+.gh-footer__copy-right-cp {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+.gh-footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.gh-footer__social-whapp, .gh-footer__social-insta, .gh-footer__social-fb, .gh-footer__social-ytube {
+  height: auto;
+  margin-right: 16px;
+  transition: 0.3s;
+}
+.gh-footer__social-whapp svg, .gh-footer__social-insta svg, .gh-footer__social-fb svg, .gh-footer__social-ytube svg {
+  width: 100%;
+  height: auto;
+}
+.gh-footer__social-whapp:hover, .gh-footer__social-insta:hover, .gh-footer__social-fb:hover, .gh-footer__social-ytube:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+.gh-footer__social-whapp:hover svg path, .gh-footer__social-insta:hover svg path, .gh-footer__social-fb:hover svg path, .gh-footer__social-ytube:hover svg path {
+  fill: #ffffff;
+}
+.gh-footer__social-whapp {
+  width: 27px;
+}
+.gh-footer__social-insta {
+  width: 17px;
+}
+.gh-footer__social-fb {
+  width: 25px;
+}
+.gh-footer__social-ytube {
+  width: 27px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gh-footer .accordion-item {
+    width: calc(33.3% - 32px);
+  }
+  .gh-footer .accordion-header {
+    margin-bottom: 8px;
+  }
+  .gh-footer__head {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .gh-footer__outer {
+    display: block;
+  }
+  .gh-footer__sec-1 {
+    width: 100%;
+    margin: 16px 0;
+  }
+  .gh-footer__sec-2 {
+    width: 100%;
+    margin: 0;
+  }
+  .gh-footer .accordion {
+    display: block;
+  }
+  .gh-footer .accordion-item {
+    width: 100%;
+    margin: 0;
+  }
+  .gh-footer .accordion-button {
+    pointer-events: fill;
+  }
+}
 .gh-pricing {
   padding: 40px 0;
   background-position: center;
