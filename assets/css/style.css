@@ -1202,6 +1202,7 @@ button {
   justify-content: center;
   position: relative;
   z-index: 1;
+  padding-bottom: 16px;
 }
 .gh-footer__social-whapp, .gh-footer__social-insta, .gh-footer__social-fb, .gh-footer__social-ytube {
   height: auto;

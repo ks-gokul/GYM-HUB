@@ -160,6 +160,7 @@
         justify-content: center;
         position: relative;
         z-index: 1;
+        padding-bottom: 16px;
         &-whapp, &-insta, &-fb, &-ytube {
             height: auto;
             margin-right: $spacer-3;
