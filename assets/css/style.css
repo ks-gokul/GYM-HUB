@@ -827,6 +827,14 @@ button {
     width: 50%;
   }
 }
+#review,
+#form,
+#price,
+#diet {
+  height: 67px;
+  margin-top: -67px;
+}
+
 .gh-main-banner {
   background-color: #000;
 }
