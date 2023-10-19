@@ -71,19 +71,19 @@
     
 }
 
-@include tablet {
-    .gh-banner {
+// @include tablet {
+//     .gh-banner {
 
-        &__img-tab {
-            display: block;
-        }
+//         &__img-tab {
+//             display: block;
+//         }
 
-        &__img-desk,
-        &__img-mob {
-            display: none;
-        }
-    }
-}
+//         &__img-desk,
+//         &__img-mob {
+//             display: none;
+//         }
+//     }
+// }
 
 @include tablet {
     .gh-banner {
@@ -98,15 +98,18 @@
 
         &__cnt {
             width: 47%;
-            height: 300px;
+            height: 400px;
+            margin-top: 66px;
         }
         
-        &__img-mob {
+        
+        &__img-tab {
             display: block;
+            margin-top: 66px;
         }
 
         &__img-desk,
-        &__img-tab {
+        &__img-mob {
             display: none;
         }
 
@@ -130,7 +133,7 @@
 
         &__cnt {
             width: 50%;
-            height: 250px;
+            height: 300px;
             margin-top: 66px;
         }
         

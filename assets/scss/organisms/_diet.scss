@@ -3,11 +3,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    height: 900px;
     position: relative;
     display: flex;
     align-items: center;
-    padding: 30px 0;
     &::after {
         position: absolute;
         content: "";
@@ -16,7 +15,15 @@
         width: 100%;
         height: 100%;
         background-color: #000;
-        opacity: 0.6;
+        opacity: 0.8;
+    }
+
+    video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &__txt {
@@ -24,8 +31,10 @@
         align-items: center;
         position: relative;
         z-index: 2;
-        span {
-            color: #fff;
+        .clr {
+            // text-shadow: 1px 1px 2px #fff, 0 0 25px #fff, 0 0 5px #fff;
+            text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+            color: #000;
             font-weight: 900;
             opacity: 0.3;
             font-size: 400px;
@@ -34,11 +43,27 @@
             transition: 0.3s;
             cursor: pointer;
             &:hover {
-                transition: 0.3s;
+                color: #fff;
+                transition: 0.1s;
                 opacity: 0.5;
+            }
+            &:first-child {
+                animation-name: example;
+                animation-iteration-count: infinite;
+                animation-duration: 4s;  
+                color: #000; 
+            }
+            @keyframes example {
+                0%   {color: #fff;}
+                25%  {color: #000;}
+                50%   {color: #fff;}
+                75%   {color: #000;}
+                100%   {color: #fff;}
             }
         }
     }
+    
+    
 
     &__plan {
         position: relative;
@@ -57,8 +82,9 @@
 
 @include tablet {
     .gh-diet {
+        height: 400px;
         &__txt {
-            span {
+            .clr {
                 font-size: 250px;
                 line-height: 250px;
             }
@@ -74,19 +100,18 @@
 @include mobile {
     .gh-diet {
         height: auto;
+        padding: 40px 0;
         &__txt {
-            display: flex;
-            flex-direction: column;
-            span {
-                font-size: 250px;
-                line-height: 250px;
+            .clr {
+                font-size: 150px;
+                line-height: 150px; 
             }
         }
 
         &__plan {
-            margin-top: -20px;
-            text-align: center;
-            padding-left: 0;
+            margin-top: 10px;
+            text-align: left;
+            padding-left: 7px;
         }
     }
 }
