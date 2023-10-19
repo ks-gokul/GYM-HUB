@@ -149,7 +149,7 @@
         background: rgba(#000000, 0.6);
         padding: $spacer-3 $spacer-0;
         &-cp {
-            font-size: 16px;
+            font-size: 14px;
             color: $color-white;
             text-align: center;
         }
@@ -160,7 +160,7 @@
         justify-content: center;
         position: relative;
         z-index: 1;
-        padding-bottom: 16px;
+        padding-bottom: 8px;
         &-whapp, &-insta, &-fb, &-ytube {
             height: auto;
             margin-right: $spacer-3;
