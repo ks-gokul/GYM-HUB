@@ -171,24 +171,31 @@
             &:hover {
                 scale: 1.1;
                 transition: 0.3s;
-                svg {
-                    path {
-                        fill: #ffffff;
-                    }
-                }
             }
         }
         &-whapp {
-            width: 27px;
+            width: 26px;
+            &:hover svg path{
+                fill: #075e54; 
+            }
         }
         &-insta {
-            width: 17px;
+            width: 16px;
+            &:hover svg path{
+                fill: #d62976; 
+            }
         }
         &-fb {
             width: 25px;
+            &:hover svg path{
+                fill: #3b5998; 
+            }
         }
         &-ytube {
-            width: 27px;
+            width: 26px;
+            &:hover svg path{
+                fill: #CD201F; 
+            }
         }
     }
 }
