@@ -20,10 +20,48 @@
         width: calc(30% - 64px);
         margin: $spacer-0 $spacer-5;
     }
+    &__social {
+        display: flex;
+        align-items: center;
+        &-whapp, &-insta, &-fb, &-ytube {
+            height: auto;
+            margin-right: $spacer-3;
+            transition: 0.3s;
+            svg {
+                width: 100%;
+                height: auto;
+            }
+            &:hover {
+                scale: 1.1;
+                transition: 0.3s;
+                svg {
+                    path {
+                        fill: #ffffff;
+                    }
+                }
+            }
+        }
+        &-whapp {
+            width: 27px;
+        }
+        &-insta {
+            width: 17px;
+        }
+        &-fb {
+            width: 25px;
+        }
+        &-ytube {
+            width: 27px;
+        }
+    }
     &__head {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: $font-medium;
         color: $color-white;
+        margin-bottom: $spacer-3;
+    }
+    &__bt-width {
+        width: 130px;
         margin-bottom: $spacer-3;
     }
     &__txt {
@@ -56,13 +94,13 @@
         display: flex;
     }
     .accordion-item {
-        width: calc(35% - 32px);
+        width: calc(25% - 32px);
         margin: $spacer-0 $spacer-3;
         background: transparent;
         border: $spacer-0;
     }
     .accordion-button {
-        font-size: 26px;
+        font-size: 18px;
         color: $color-white;
         background: transparent;
         padding: $spacer-0;
