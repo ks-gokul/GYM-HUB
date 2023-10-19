@@ -56,8 +56,8 @@
         display: flex;
     }
     .accordion-item {
-        width: calc(30% - 64px);
-        margin: $spacer-0 $spacer-5;
+        width: calc(35% - 32px);
+        margin: $spacer-0 $spacer-3;
         background: transparent;
         border: $spacer-0;
     }
@@ -76,6 +76,9 @@
             content: none;
         }
     }
+    .accordion-header {
+        position: relative;
+      }
     .accordion-body {
         padding: $spacer-0;
     }

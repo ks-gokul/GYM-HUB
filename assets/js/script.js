@@ -41,3 +41,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// onload accordion collapse
+const accordionButton = document.querySelectorAll(
+  ".gh-footer__sec-2 .accordion-button"
+);
+const accordionCnt = document.querySelectorAll(
+  ".gh-footer__sec-2 .accordion-collapse"
+);
+window.addEventListener("load", () => {
+  if (window.innerWidth < 767) {
+    accordionButton.forEach((e) => {
+      e.classList.add("collapsed");
+    });
+    accordionCnt.forEach((e) => {
+      e.classList.remove("show");
+    });
+  } else {
+    accordionButton.forEach((e) => {
+      e.classList.remove("collapsed");
+    });
+    accordionCnt.forEach((e) => {
+      e.classList.add("show");
+    });
+  }
+});
