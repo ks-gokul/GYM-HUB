@@ -90,3 +90,9 @@
         color: #f1f1f1;
     }
 }
+
+@include mobile {
+    .gh-pricetile {
+        min-height: auto;
+    }
+}

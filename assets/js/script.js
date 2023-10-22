@@ -4,7 +4,7 @@ $(".slider").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   dots: true,
-  // autoplay: true,
+  autoplay: true,
   // fade: true,
 });
 
@@ -22,6 +22,32 @@ if (priceTile) {
     });
   });
 }
+
+//mobile
+
+const hiddentile = document.querySelector(".hide");
+const showtile = document.querySelector(".show");
+const arrowdown = document.querySelectorAll(".gh-pricing__arrow");
+
+if (screen.width < 678) {
+  // arrowdown.forEach((item) => {
+  //   item.addEventListener("click", () => {
+  //     hiddentile.forEach((item) => {
+  //       item.classList.add("show");
+  //     });
+  //   });
+  // });
+
+  arrowdown.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("up");
+      hiddentile.classList.toggle("show");
+      // hiddentile.forEach((item) => {});
+    });
+  });
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var lazyloadImages;
@@ -65,7 +91,5 @@ window.addEventListener("load", () => {
     });
   }
 });
-
-//Diet 
 
 

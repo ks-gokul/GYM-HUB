@@ -36,5 +36,25 @@
             width: calc(100% - 32px);
             padding-bottom: $spacer-4;
         }
+        .hide {
+            display: none;
+        }
+
+        .hide.show {
+            display: block;
+        }
+        &__arrow {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: $spacer-2 auto;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            &.up {
+                transform: rotate(180deg);
+            }
+        }
     }
 }
