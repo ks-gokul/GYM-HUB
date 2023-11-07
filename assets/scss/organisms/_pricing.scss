@@ -16,6 +16,10 @@
         width: calc(25% - 32px);
         margin: 0 16px;
     }
+
+    &__arrow {
+        display: none;
+    }
 }
 
 @include tablet {
@@ -23,6 +27,9 @@
         &__tile {
             width: calc(50% - 32px);
             padding-bottom: $spacer-4;
+        }
+        &__arrow {
+            display: none;
         }
     }
 }

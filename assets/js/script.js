@@ -9,44 +9,19 @@ $(".slider").slick({
 });
 
 //pricing
+const arrows = document.querySelectorAll(".gh-pricing__arrow");
+const lists = document.querySelectorAll(".hide");
+const tiles = document.querySelectorAll(".gh-pricetile");
 
-const priceTile = document.querySelectorAll(".gh-pricetile");
-
-if (priceTile) {
-  priceTile.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      priceTile.forEach((ele) => {
-        ele.classList.remove("active");
-      });
-      item.classList.add("active");
+if (arrows) {
+  arrows.forEach((arrow, i) => {
+    arrow.addEventListener("click", () => {
+      lists[i].classList.toggle("show");
+      arrow.classList.toggle("up");
+      tiles[i].classList.toggle("active");
     });
   });
 }
-
-//mobile
-
-const hiddentile = document.querySelector(".hide");
-const showtile = document.querySelector(".show");
-const arrowdown = document.querySelectorAll(".gh-pricing__arrow");
-
-if (screen.width < 678) {
-  // arrowdown.forEach((item) => {
-  //   item.addEventListener("click", () => {
-  //     hiddentile.forEach((item) => {
-  //       item.classList.add("show");
-  //     });
-  //   });
-  // });
-
-  arrowdown.forEach((item) => {
-    item.addEventListener("click", () => {
-      item.classList.toggle("up");
-      hiddentile.classList.toggle("show");
-      // hiddentile.forEach((item) => {});
-    });
-  });
-}
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
